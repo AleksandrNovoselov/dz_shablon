@@ -23,6 +23,7 @@ template <class T> T findMin(vector<T>& arr)
             Min = i;
         }
     }
+    cout << "Min: " << *Min << endl;
     return *Min;
 }
 template <class T> T findMax(vector<T>& arr)
@@ -35,6 +36,7 @@ template <class T> T findMax(vector<T>& arr)
             Max = i;
         }
     }
+    cout<<"Max: "<<*Max<<endl;
     return *Max;
 }
 template <class T> void print(vector<T>& arr)
@@ -47,14 +49,23 @@ template <class T> void print(vector<T>& arr)
 }
 int main()
 {
-    vector<int> vecI(3);
-    vector<float> vecF(3);
+    vector<int> vecI(5);
+    vector<float> vecF(5);
     vector<string> vecS(10);
 
     random<int>(vecI);
     print(vecI);
+    findMax(vecI);
+    findMin(vecI);
+
+    random<float>(vecF);
+    print(vecF);
+    findMax(vecF);
+    findMin(vecF);
 
     random<string>(vecS);
     print(vecS);
+    findMax(vecS);
+    findMin(vecS);
 }
 
