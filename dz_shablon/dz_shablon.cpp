@@ -1,4 +1,11 @@
-﻿#include <iostream>
+﻿//Тема: Шаблоны функций
+//Задание.
+//Реализуйте шаблонные функции для поиска максимума,
+//минимума, сортировки массива(любым алгоритмом со -
+//    ртировки), двоичного поиска в массиве, замены элемента
+//    массива на переданное значение.
+
+#include <iostream>
 #include <vector>
 #include <ctime> 
 #include <algorithm>
@@ -78,7 +85,7 @@ template <class T> vector<T> fSort(vector<T>& arr)
     return arr;
 }
 
-template <class T> T bSearch(vector<T>& arr,T key)
+template <class T> int bSearch(vector<T>& arr,T key)
 {
     int midd = 0;
     int left = 0;
@@ -147,7 +154,7 @@ int main()
     cout << "Введите символ для поиска: ";
     string keyS;
     cin >> keyS;
-    /*index = bSearch(vecS, keyS);
-    findPrint(index);*/
+    index = bSearch(vecS, keyS);
+    findPrint(index);
 }
 
